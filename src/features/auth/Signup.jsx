@@ -54,12 +54,6 @@ const Signup = () => {
         />
       </div>
 
-      {/* Home link - positioned differently for mobile */}
-      {/* <div className="lg:absolute top-6 left-179 px-4 py-3 lg:px-0 lg:py-0">
-        <a href="/" className="text-sm text-gray-600 hover:text-blue-600">
-          Visit Home
-        </a>
-      </div> */}
 
       {/* Right Section */}
       <div className="flex-1 bg-white p-4 sm:p-6 lg:p-10 relative">
@@ -70,14 +64,14 @@ const Signup = () => {
               <img
                 src={logo}
                 alt="Circle Logo"
-                className="h-[27px]" // smaller from 33px
+                className="h-[27px]" 
               />
             </div>
             <div className="flex flex-col items-center">
               <img
                 src={logo2}
                 alt="Circle"
-                className="h-[18px]" // smaller from 23px
+                className="h-[18px]"
               />
               <span className="text-[8px] font-semibold text-gray-600">
                 SAVING YOUR MONEY
@@ -128,7 +122,7 @@ const Signup = () => {
               </select>
             </label>
 
-            {/* Passwords - stack on mobile */}
+            {/* Passwords - stack on responsive */}
             <div className="flex flex-col sm:flex-row justify-between gap-4">
               {/* Password */}
               <label className="w-full sm:w-1/2 text-sm text-gray-800 relative">
