@@ -1,0 +1,648 @@
+/* .deals-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .header-section {
+    display: flex;
+    align-items: center;
+    gap: 820px;
+    margin-bottom: 20px;
+  }
+
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .brand-name {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .save-tagline {
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 15px;
+  }
+
+  .save-green {
+    color: #00b386;
+    font-weight: bold;
+  }
+
+
+  .always-blue {
+    color: #007bff;
+    font-weight: bold;
+  }
+
+  .filters, .filter-buttons {
+    display: flex;
+    gap: 15px;
+  }
+
+  .filters select,
+  .sort-btn,
+  .view-btn {
+    padding: 12px 16px;
+    border: 1px solid #EAECF0;
+    background: #F9FAFB;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+
+  .view-btn {
+    background-color: #0F2E3D;
+    color: white;
+    border: none;
+    font-size: 16px;
+  }
+  .sort-btn
+  {
+    background-color: #F9FAFB;
+    color: #1D2939;
+    border: 1px solid #EAECF0;
+    font-size: 16px;
+  }
+  .sort-icon {
+    width: 16px;
+    height: 19px;
+    margin-left: 6px;
+
+  }
+
+
+.cards-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-left: 54px;
+  }
+
+  .deal-card {
+    width: 550px;
+    min-height: 360px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+
+  .card-image {
+    height: 240px;
+    overflow: hidden;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+  }
+
+
+  .card-image .image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+  }
+
+  .deal-card:hover .card-image img {
+    transform: scale(1.05);
+  }
+
+  .deal-card h3 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .deal-card p {
+    font-size: 16px;
+    color: #444;
+    margin: 0;
+    line-height: 1.4;
+    min-height: 22px;
+  }
+
+  .location,
+.distance {
+  font-size: 15px;
+  color: #666;
+  min-height: 20px;
+}
+
+  .tags {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tag {
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+
+  .deal-card > *:last-child {
+    margin-bottom: 10px;
+  }
+
+
+
+  .save-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+
+
+  .right-section {
+    display: flex;
+    gap: 15px;
+    margin-right: 60px;
+  }
+
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s;
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .search-section .copyright-text {
+    font-size: 18px;
+    color: #475467;
+
+  }
+  .header1 {
+    margin-top: 30px;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  .header-container {
+    display: flex;
+    align-items: center;
+    margin-left: 56px;
+    }
+
+    .footer{
+      display:flex;
+      margin-top: 50px;
+    } */
+
+.deals-container {
+  padding: 20px 60px; /* Increased horizontal padding */
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  gap: 350px; /* gap between right section and left section */
+  margin-bottom: 20px;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60px;
+}
+.header-left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px; 
+}
+.brand-name {
+  font-size: 20px; /* Increased from 28px */
+  font-weight: bold;
+  margin-bottom: 15px; /* Increased from 10px */
+}
+
+.save-tagline {
+  display: flex;
+  align-items: center;
+  gap: 1px;            /* Space between image and text */
+  font-size: 14px;
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.save-green {
+  color: #318CE7;
+  font-weight: bold;
+  font-size: 1.1rem; 
+}
+.save-black {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.always-blue {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.filters,
+.filter-buttons {
+  display: flex;
+  gap: 23px; /* Increased from 10px */
+}
+
+.filters select,
+.view-btn {
+  padding: 6px 10px; /* Increased from 8px 12px */
+  border: 1px solid #eaecf0;
+  background: #f9fafb;
+  border-radius: 8px; /* Increased from 6px */
+  cursor: pointer;
+  font-size: 12px; /* Added to increase font size */
+  max-width: 190px;
+  color: #667085;
+}
+.sort-btn {
+  height: 10px;
+}
+
+.view-btn {
+  background-color: #318CE7;
+  color: white;
+  border: none;
+  font-size: 16px; /* Added to increase font size */
+}
+.sort-btn {
+  background-color: #f9fafb;
+  color: #1d2939;
+  border: 1px solid #eaecf0;
+  font-size: 16px;
+  height: 30px;
+  width: 90px;   
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 6px;       /* Space between text and icon */
+  border-radius: 8px;
+  cursor: pointer;
+}
+.view-btn {
+  background-color: #318CE7;
+  color: white;
+  border: none;
+  font-size: 14px;       /* Decreased from 16px */
+  height: 30px;          /* Decreased from 40px */
+  padding: 6px 14px;     /* Adjusted padding */
+  border-radius: 6px;    /* Smaller for balance */
+  cursor: pointer;
+}
+.sort-icon {
+  width: 14px;           /* Slightly reduced for balance */
+  height: 9px;
+  margin-left: 4px;
+}
+
+/* Updated CSS for larger cards (width and height) */
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+  justify-content: center;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.divider {
+  border: none;
+  border-top: 2px dotted #d0d5dd;
+  margin: 10px 0; /* vertical space */
+}
+
+.deal-card1 {
+  width: 384px;
+  min-height: 180px; 
+  border-radius: 18px;
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); */
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 2px dotted #d0d5dd;
+  gap: 3px;
+}
+
+.card-image {
+  height: 240px;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  position: relative; /* Added for positioning any overlay elements */
+  width: 100%;
+}
+
+.card-image img {
+  width: 105%;
+  height: 100%;
+  object-fit: cover;
+  /* transition: transform 0.3s ease; */
+}
+
+/* Text overlay on image (optional) */
+.card-image .image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+/* .deal-card:hover .card-image img {
+    transform: scale(1.05);
+  } */
+
+.deal-card1 h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.deal-card1 p {
+  font-size: 11px;
+  color: #444;
+  margin: 0;
+  line-height: 1.4;
+  min-height: 22px; /* Reserve space even if content is missing */
+}
+
+.location,
+.distance {
+  font-size: 12px;
+  color: #666;
+  min-height: 15px;
+}
+
+.tags {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 8px 12px; 
+  border-radius: 10px; /* Optional: more rounded */
+  font-size: 11px; 
+  font-weight: 600; 
+}
+
+/* Add some spacing at the bottom of the card */
+.deal-card1 > *:last-child {
+  margin-bottom: 10px;
+}
+
+.save-icon {
+  width: 28px; 
+  height: 28px; 
+  margin-right: 10px; 
+  vertical-align: middle;
+}
+
+
+.right-section {
+  display: flex;
+  gap: -90px; /* Space between icons */
+  margin-right: 50px; /* Pushes section to the right */
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.copyright-text {
+  font-size: 12px;
+  color: #475467;
+  white-space: nowrap;
+}
+.search-section {
+  flex: 1;
+  display: flex;
+  margin-left: -60px;
+  margin-top: 10px;
+}
+
+.header1 {
+  margin-top: 30px;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.footer {
+  display: flex;
+  margin-top: 50px;
+}
+
+.logo-left-side {
+  margin-left: 50px;
+}
+
+.circle-center-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 12px;
+}
+
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .header-left,
+  .header-right {
+    margin: 0;
+    width: 100%;
+  }
+
+  .save-tagline {
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  .filters,
+  .filter-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filters select {
+    max-width: 120px; 
+    font-size: 0.75rem; 
+    padding: 5px 8px; 
+  }
+  .view-btn,
+  .sort-btn {
+    max-width: 80px; /* Further reduced for iPhone SE */
+    font-size: 0.7rem;
+    padding: 3px 6px; /* Further reduced padding */
+  }
+
+  .cards-wrapper {
+    gap: 15px;
+    /* justify-content: center;
+    margin-right: 40px; */
+  }
+
+  .deal-card1 {
+    /* cards width increase  */
+    width: 310px; 
+  }
+  .card-image {
+    height: 160px;
+    width: 100%;
+  }
+
+  .deal-card1 h3 {
+    font-size: 0.9rem;
+  }
+
+  .deal-card1 p {
+    font-size: 0.75rem;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .header-container {
+    margin-right: 0;
+  }
+
+  .logo-left-side {
+    margin-left: 0;
+  }
+
+  .right-section {
+    margin-right: 0;
+    justify-content: center;
+  }
+
+  .search-section {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .deals-container {
+    padding: 10px;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .save-tagline {
+    font-size: 0.75rem;
+  }
+
+  .save-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .deal-card1 {
+    width: 358px;
+  }
+
+  .card-image {
+    height: 140px;
+  }
+
+  .deal-card1 h3 {
+    font-size: 0.85rem;
+  }
+
+  .deal-card1 p {
+    font-size: 0.7rem;
+  }
+
+  .tag img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .social-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .copyright-text {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,55 @@
+.right-section {
+  display: flex;
+  gap: -90px; /* Space between icons */
+  margin-right: 60px; /* Pushes section to the right */
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.copyright-text {
+  font-size: 12px;
+  color: #475467;
+  white-space: nowrap;
+}
+.search-section {
+  flex: 1;
+  display: flex;
+  margin-left: -60px;
+  margin-top: 10px;
+}
+
+.header1 {
+  margin-top: 30px;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.footer {
+  display: flex;
+  margin-top: 50px;
+}
+
+.logo-left-side {
+  margin-left: 50px;
+}
+
+.circle-center-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 12px;
+}

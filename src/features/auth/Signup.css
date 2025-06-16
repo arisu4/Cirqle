@@ -1,0 +1,167 @@
+.signup-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .signup-left {
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .signup-image {
+    height: 580px;
+    width: 100%; /* Changed from auto to take full width of the container */
+    object-fit: contain;
+    margin-top: 20px;
+    padding: 0 40px; /* Adds space inside the image container on both sides */
+    box-sizing: border-box;
+  }
+  
+  
+  
+  .signup-right {
+    flex: 1;
+    padding: 40px;
+    background: #fff;
+    position: relative;
+    margin-top: 40px;
+  }
+  
+  .visit-home {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .circle-logo {
+    width: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .form-box {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .form-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #1D2939;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="password"],
+  select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #D0D5DD;
+  }
+ 
+  .password-row input::placeholder {
+    color: #101828;
+    opacity: 1;
+  }
+  
+  .checkbox-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .checkbox-row span {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+  
+  .submit-btn {
+    width: 410px; /* decreased from 100% to a fixed width */
+    height: 35px; /* controls the height directly */
+    padding: 8px 12px; /* smaller padding */
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px; /* slightly smaller text */
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; /* center the button */
+  }
+  
+  
+  /* .submit-btn:hover {
+    background-color: #005bb5;
+  }
+   */
+  .login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .password-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .password-row .half-width {
+    width: 48%;
+  }
+
+  .header-container34 {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* space between logo and circle+text */
+    margin-bottom: 10px;
+  }
+  
+  .logo-left34 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-left-img34 {
+    height: 33px;
+  }
+  
+  .circle-center34 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .circle-img34 {
+    height: 23px;
+  }
+  
+  .tagline34 {
+    font-size: 10px;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .required-star {
+    color: #D92D20;
+  }
+  
+  
