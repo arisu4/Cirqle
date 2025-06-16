@@ -1,25 +1,22 @@
 import "./Home.css";
-import sealcheck from "../assets/images/SealCheck.png";
+import sealcheck from "../../assets/images/SealCheck.png";
 
-import airplane from "../assets/images/AirplaneTilt.png";
-import compass from "../assets/images/Compass.png";
-import sortbyimage from "../assets/images/sortby.png";
-import content1 from "../assets/images/content1.jpg";
-import content2 from "../assets/images/content2.png";
-import content3 from "../assets/images/content3.jpg";
-import content4 from "../assets/images/content4.png";
-import content5 from "../assets/images/content5.jpg";
-import content6 from "../assets/images/content6.jpg";
+import airplane from "../../assets/images/AirplaneTilt.png";
+import compass from "../../assets/images/Compass.png";
+import sortbyimage from "../../assets/images/sortby.png";
+import content1 from "../../assets/images/content1.jpg";
+import content2 from "../../assets/images/content2.png";
+import content3 from "../../assets/images/content3.jpg";
+import content4 from "../../assets/images/content4.png";
+import content5 from "../../assets/images/content5.jpg";
+import content6 from "../../assets/images/content6.jpg";
 
 import { Link } from "react-router-dom";
-import logos from "../assets/images/Logos.png";
-import logo1 from "../assets/images/logo1.png";
-import lg from "../assets/images/lg.png";
-import vip from "../assets/images/vip.png";
-import Footer from "../components/common/Footer";
-// import DealContent from "./DealContent";
-// import HowitsWork from "./HowitsWork";
-// import RelevantDeal from "../components/common/RelevantDeal";
+import logos from "../../assets/images/Logos.png";
+import logo1 from "../../assets/images/logo1.png";
+import lg from "../../assets/images/lg.png";
+import vip from "../../assets/images/vip.png";
+import Footer from "../../components/common/Footer";
 
 const deals = [
   {
@@ -149,16 +146,15 @@ export default function DealsList() {
         </div>
 
         <div className="header-right">
-        <h2 className="save-tagline">
-  <img src={sealcheck} alt="Save" className="save-icon" />
-  <span>
-    <span className="save-green"> SAVE</span>
-    <span className="save-black"> now with Deals that </span>
-    <span className="save-green">ALWAYS</span>
-    <span className="save-black"> work</span>
-  </span>
-</h2>
-
+          <h2 className="save-tagline">
+            <img src={sealcheck} alt="Save" className="save-icon" />
+            <span>
+              <span className="save-green"> SAVE</span>
+              <span className="save-black"> now with Deals that </span>
+              <span className="save-green">ALWAYS</span>
+              <span className="save-black"> work</span>
+            </span>
+          </h2>
 
           <div className="filter-buttons">
             <button className="sort-btn">

@@ -1,83 +1,10 @@
-// import cirqle from '../assets/images/Layer 2.png'
-// import cirqlelogo from '../assets/images/Layer 1.png'
-// import loginpic from '../assets/images/login.png'
-// import Texas from '../assets/images/texas.png'
-// import gps from '../assets/images/gps.png'
-// import search from '../assets/images/search.png'
-// import dropdown from '../assets/images/dropdown.png'
-// import './Header.css';
-// import { useNavigate } from 'react-router-dom';
 
-// const Header = () => {
-//   const navigate = useNavigate();
 
-//   return (
-//     <header className="header">
-//  <div className="header-wrapper">
-//       {/* Left side logo */}
-//       <div className="header-container">
-//   <div className="logo-left">
-//     <img src={cirqlelogo} alt="Circle Logo" className="logo-left-img" />
-//   </div>
-
-//   <div className="circle-center">
-//     <span className="tagline">SAVING YOUR MONEY</span>
-//     <img src={cirqle} alt="Circle" className="circle-img" />
-//   </div>
-// </div>
-
-// <div className="vertical-divider"></div>
-//       {/* Search section */}
-//       <div className="outer-box">
-//   <div className="inner-box">
-//     <span style={{ color: '#667085' }}>Categories:</span>
-//     <span>&nbsp;Books, Mus..</span>
-//     <img
-//       src={dropdown}
-//       alt="Category Icon"
-//       style={{ marginLeft: '5px', width: '16px', height: '16px' }}
-//     />
-//   </div>
-//   <span className="placeholder">Search</span>
-//   <img src={search} alt="Search" className="search-icon" />
-// </div>
-
-// <div className="vertical-divider"></div>
-//       {/* Right side buttons */}
-//       <div className="right-section">
-//   <button className="location-btn box-btn">
-//     <img src={Texas} alt="Location" className="location-icon" />
-//     <img src={gps} alt="Texas" className="state-icon" />
-//   </button>
-//   <div className="vertical-divider"></div>
-
-//   {/* Wrap login icon and button in a flex container */}
-//   <div className="login-container">
-//   <img src={loginpic} alt="icon" className="login-icon" />
-//   <button className="login-btn">Login/Signup</button>
-
-//   {/* Dropdown box */}
-//   <div className="login-dropdown">
-//     <div className="dropdown-option" onClick={() => navigate('/signin')}>
-//               Sign up / Create Account
-//             </div>
-//     <div className="dropdown-option">Login to the portal</div>
-//   </div>
-// </div>
-
-// </div>
-// </div>
-//     </header>
-//   )
-// }
-
-// export default Header;
-
-import cirqlelogo from "../assets/images/logo.png";
-import cirqlelogo2 from "../assets/images/logo2.png";
-import location from "../assets/images/location.png";
-import gps from "../assets/images/gps.png";
-import user from "../assets/images/user.png";
+import cirqlelogo from "../../assets/images/logo.png";
+import cirqlelogo2 from "../../assets/images/logo2.png";
+import location from "../../assets/images/location.png";
+import gps from "../../assets/images/gps.png";
+import user from "../../assets/images/user.png";
 import { FiSearch, FiMapPin, FiMenu } from "react-icons/fi";
 import { FaUserCircle } from "react-icons/fa";
 import { useState } from "react";
@@ -86,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [category, setCategory] = useState("All Categories");
-  const [showLoginOptions, setShowLoginOptions] = useState(false); // 👈 added state
+  const [showLoginOptions, setShowLoginOptions] = useState(false); 
   const navigate = useNavigate();
 
 
@@ -159,13 +86,13 @@ const Header = () => {
         <div className="absolute top-12 right-0 bg-white shadow-lg rounded-md text-sm py-2 w-48 border z-50">
           <button
             className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-            onClick={() => navigate("/signin")} // ✅ Sign Up
+            onClick={() => navigate("/signin")}
           >
             Sign Up / Create Account
           </button>
           <button
             className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-            onClick={() => navigate("/login")} // ✅ Login
+            onClick={() => navigate("/login")} 
           >
             Login to the Portal
           </button>
