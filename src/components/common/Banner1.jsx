@@ -8,7 +8,6 @@ import closedeal from "../../assets/images/closedeal.png";
 import bannermid from "../../assets/images/bannermid.png";
 import Banner2 from "./Banner2";
 
-
 const Banner1 = () => {
   return (
     <section className="bg-white py-12 px-6 md:px-16">
@@ -78,21 +77,20 @@ const Banner1 = () => {
             <img
               src={closedeal}
               alt="Close by deals"
-              className="h-18 w-40 object-contain" // increased size
+              className="h-18 w-40 object-contain"
             />
           </button>
         </div>
 
-        {/* Video Thumbnail */}
+        {/* video tumhbail */}
         <div className="relative group">
           <img
             src={youtubetumhbail}
             alt="Video"
-            className="h-65 w-110 object-cover rounded-2xl" // adjust these values as needed
+            className="h-65 w-110 object-cover rounded-2xl"
           />
         </div>
       </div>
-     
     </section>
   );
 };

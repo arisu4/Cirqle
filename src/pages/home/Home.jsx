@@ -1,6 +1,5 @@
 import "./Home.css";
 import sealcheck from "../../assets/images/SealCheck.png";
-
 import airplane from "../../assets/images/AirplaneTilt.png";
 import compass from "../../assets/images/Compass.png";
 import sortbyimage from "../../assets/images/sortby.png";
@@ -124,7 +123,7 @@ export default function DealsList() {
               <option value="Utilites">Utilites</option>
               <option value="Food & Drink">Food & Drink</option>
               {/* <option value="Book,Music,Games & Movies">Book,Music,Games & Movies</option>
-  <option value="Baby & Child">Baby & Child</option> */}
+              <option value="Baby & Child">Baby & Child</option> */}
             </select>
 
             <select defaultValue="">
@@ -168,7 +167,8 @@ export default function DealsList() {
           </div>
         </div>
       </div>
-
+      
+      {/* for cards code */}
       <div className="cards-wrapper">
         {deals.map((deal) => (
           <div key={deal.id} className="deal-card1">
@@ -263,9 +263,6 @@ export default function DealsList() {
           </div>
         ))}
       </div>
-      {/* <DealContent/> */}
-      {/* footer section */}
-      {/* <HowitsWork/> */}
       <Footer />
     </div>
   );

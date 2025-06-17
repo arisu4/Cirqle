@@ -8,6 +8,7 @@ import Banner1 from "../components/common/Banner1";
 import DealsList from "../pages/home/Home";
 import CategoryList from "../pages/categories/CategoryList";
 
+
 const MainRoutes = () => {
   return (
     <Router basename="/current-project/react-project/cirqle">
@@ -18,13 +19,13 @@ const MainRoutes = () => {
             <>
               <Header />
               <Banner1 />
-              <CategoryList/>
               <Banner2 />
               <br />
               <DealsList />
             </>
           }
         />
+        <Route path="/category" element={<CategoryList/>} />
         <Route path="/signin" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>

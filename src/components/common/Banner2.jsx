@@ -17,11 +17,11 @@ const Banner2 = () => {
   return (
     <div className="w-full h-14 bg-gradient-to-r from-[#318CE7] to-[#0063C5] overflow-hidden">
       <div className="flex items-center h-full animate-[marquee_20s_linear_infinite] whitespace-nowrap">
-        {/* First marquee set */}
+        {/* First content set */}
         {[...Array(10)].map((_, i) => (
           <div key={`first-${i}`}>{content}</div>
         ))}
-        {/* Second marquee set */}
+        {/* Second content set */}
         {[...Array(10)].map((_, i) => (
           <div key={`second-${i}`}>{content}</div>
         ))}
