@@ -30,6 +30,7 @@
 .closeby-header p{
   margin-left: 40px;
 }
+
 /* category container */
 .category-container {
   display: flex;
@@ -556,7 +557,7 @@
 
   .deals-filters {
     display: flex;
-    flex-direction: column; /* <<< Stack items vertically on mobile too */
+    flex-direction: column; /* Stack items vertically on mobile too */
     width: 100%;
     gap: 8px;
   }

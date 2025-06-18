@@ -133,8 +133,8 @@ const CategoryList = () => {
 
   return (
     <div>
-      <Header/>
-      <br/>
+      <Header />
+      <br />
       <div className="closeby-header">
         <p className="breadcrumb">
           <span className="home">Home</span> /{" "}
@@ -213,7 +213,7 @@ const CategoryList = () => {
               </div>
             </div>
           </div>
-          {/* cards */}
+          {/* This are cards section */}
           {deals.map((deal) => (
             <div key={deal.id} className="deal-card">
               <div className="deal-card-image-wrapper">
@@ -282,11 +282,9 @@ const CategoryList = () => {
             </div>
           ))}
         </div>
-
       </div>
-      <br/>
-      <Footer/>
-     
+      <br />
+      <Footer />
     </div>
   );
 };

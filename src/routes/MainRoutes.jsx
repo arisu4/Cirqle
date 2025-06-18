@@ -7,7 +7,7 @@ import Header from "../components/common/Header";
 import Banner1 from "../components/common/Banner1";
 import DealsList from "../pages/home/Home";
 import CategoryList from "../pages/categories/CategoryList";
-
+import ListingDetails from "../pages/listing/ListingDetails";
 
 const MainRoutes = () => {
   return (
@@ -19,13 +19,14 @@ const MainRoutes = () => {
             <>
               <Header />
               <Banner1 />
+              <ListingDetails/>
               <Banner2 />
               <br />
               <DealsList />
             </>
           }
         />
-        <Route path="/category" element={<CategoryList/>} />
+        <Route path="/category" element={<CategoryList />} />
         <Route path="/signin" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
