@@ -1,0 +1,349 @@
+.listing {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: sans-serif;
+  margin-left: 30px;
+}
+
+.listing__images {
+  flex: 1;
+}
+
+.listing__main-image-wrapper {
+  position: relative;
+}
+
+.listing__main-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.listing__thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.listing__thumbnails img {
+  width: 150px;
+  height: 110px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.listing__thumbnail--highlighted {
+  border: 2px solid #318ce7;
+}
+
+.listing__details {
+  flex: 1;
+}
+
+.listing__breadcrumb {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.listing__breadcrumb-item--active {
+  color: #000;
+}
+
+.listing__brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.listing__travel {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+}
+
+.listing__travel-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.4rem;
+}
+
+.listing__travel-text {
+  font-size: 0.9rem;
+  color: #1d2939;
+  font-weight: 500;
+}
+
+.listing__brand-name {
+  display: flex;
+  align-items: center;
+  color: #1d2939;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.listing__brand-logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+}
+
+.listing__title {
+  font-size: 2.1rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.listing__location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #777;
+}
+
+.listing__location--top {
+  font-size: 0.85rem;
+}
+
+.listing__location--bottom {
+  font-size: 0.75rem;
+  color: #333;
+}
+
+.listing__location-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.listing__offer-coupon {
+  background-color: #318ce70d;
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  width: 500px;
+  height: 160px;
+}
+
+.listing__offer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.listing__offer-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.listing__offer-image {
+  width: 440px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.listing__offer-text {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #007453;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-left: 94px;
+}
+
+.listing__coupon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.listing__coupon span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.listing__coupon-label {
+  font-weight: bold;
+  color: #333;
+  font-size: 0.85rem;
+}
+
+.listing__coupon-code {
+  font-family: monospace;
+  color: #318ce7;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.listing__buy-now-btn {
+  background-color: #318ce7;
+  color: #ffffff;
+  border: none;
+  padding: 6px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: center;
+  width: 440px;
+}
+
+.listing__buy-now-btn:hover {
+  background-color: #0056b3;
+}
+
+.listing__coupon-info-wrapper {
+  margin-bottom: 1rem;
+}
+
+.listing__coupon-info-heading {
+  color: #0c111d;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.listing__coupon-info {
+  color: #1d2939;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .listing {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    margin-left: 0;
+  }
+
+  .listing__offer-coupon {
+    width: 100%;
+    height: auto;
+  }
+
+  .listing__offer-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .listing__coupon {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .listing__buy-now-btn {
+    margin-left: 0;
+    width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .listing {
+    padding: 1rem;
+  }
+
+  .listing__title {
+    font-size: 1.6rem;
+  }
+
+  .listing__breadcrumb {
+    font-size: 0.8rem;
+  }
+
+  .listing__thumbnails {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .listing__thumbnails img,
+  .listing__thumbnail--highlighted {
+    width: 120px;
+    height: 80px;
+  }
+
+  .listing__brand {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .listing__brand-name {
+    margin-bottom: 0.5rem;
+  }
+
+  .listing__offer-coupon {
+    padding: 1rem;
+  }
+
+  .listing__coupon-code {
+    font-size: 0.9rem;
+  }
+
+  .listing__coupon-info {
+    font-size: 0.8rem;
+  }
+  .listing__offer-text {
+    font-size: 1rem;
+    padding: 5px 10px;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listing__title {
+    font-size: 1.4rem;
+  }
+
+  .listing__breadcrumb {
+    font-size: 0.75rem;
+  }
+
+  .listing__thumbnails img,
+  .listing__thumbnail--highlighted {
+    width: 100px;
+    height: 70px;
+  }
+
+  .listing__brand-logo {
+    width: 20px;
+    height: 20px;
+  }
+
+  .listing__offer-coupon {
+    padding: 0.8rem;
+  }
+
+  .listing__coupon {
+    gap: 0.5rem;
+  }
+
+  .listing__buy-now-btn {
+    width: 100%;
+  }
+
+  .listing__location--top,
+  .listing__location--bottom {
+    font-size: 0.75rem;
+  }
+
+  .listing__location--bottom img {
+    width: 14px;
+    height: 14px;
+  }
+  .listing__offer-text {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    top: 6px;
+   right: 5px;
+  }
+}

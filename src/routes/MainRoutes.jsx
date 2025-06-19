@@ -7,7 +7,9 @@ import Header from "../components/common/Header";
 import Banner1 from "../components/common/Banner1";
 import DealsList from "../pages/home/Home";
 import CategoryList from "../pages/categories/CategoryList";
-import ListingDetails from "../pages/listing/ListingDetails";
+
+// import Withoutcoupondetails from "../pages/listing/withoutcoupon/Withoutcoupondetails";
+// import ListingDetails from "../pages/listing/withcoupon/ListingDetails";
 
 const MainRoutes = () => {
   return (
@@ -19,7 +21,8 @@ const MainRoutes = () => {
             <>
               <Header />
               <Banner1 />
-              <ListingDetails/>
+              {/* <ListingDetails/>
+              <Withoutcoupondetails/> */}
               <Banner2 />
               <br />
               <DealsList />

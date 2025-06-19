@@ -213,6 +213,7 @@ const CategoryList = () => {
               </div>
             </div>
           </div>
+
           {/* This are cards section */}
           {deals.map((deal) => (
             <div key={deal.id} className="deal-card">
