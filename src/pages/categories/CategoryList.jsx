@@ -282,6 +282,7 @@ const CategoryList = () => {
               </div>
             </div>
           ))}
+          
         </div>
       </div>
       <br />

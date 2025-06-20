@@ -167,7 +167,7 @@ export default function DealsList() {
           </div>
         </div>
       </div>
-      
+
       {/* for cards code */}
       <div className="cards-wrapper">
         {deals.map((deal) => (

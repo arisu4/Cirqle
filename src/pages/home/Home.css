@@ -515,6 +515,8 @@
   margin: 0 12px;
 }
 
+
+
 @media (max-width: 768px) {
   .header-section {
     flex-direction: column;
