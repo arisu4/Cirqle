@@ -7,7 +7,9 @@ import Header from "../components/common/Header";
 import Banner1 from "../components/common/Banner1";
 import DealsList from "../pages/home/Home";
 import CategoryList from "../pages/categories/CategoryList";
+
 import RelevantDeals from "../pages/relevantdeals/RelevantDeals";
+import Mycoupon from "../pages/mycoupon/Mycoupon";
 
 // import Withoutcoupondetails from "../pages/listing/withoutcoupon/Withoutcoupondetails";
 // import ListingDetails from "../pages/listing/withcoupon/ListingDetails";
@@ -24,7 +26,8 @@ const MainRoutes = () => {
               <Banner1 />
               {/* <ListingDetails/>
               <Withoutcoupondetails/> */}
-              <RelevantDeals/>
+              {/* <RelevantDeals/> */}
+             <Mycoupon/>
               <Banner2 />
               <br />
               <DealsList />

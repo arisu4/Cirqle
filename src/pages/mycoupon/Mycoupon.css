@@ -1,0 +1,213 @@
+/* category header */
+.category-header {
+  display: flex;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #fff;
+}
+
+.category-header h1 {
+  font-size: 28px;
+  margin: 0;
+  margin-left: 15px;
+}
+
+.all-coupons-box {
+    background-color: #f9fafb;
+    color: #0f172a;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+  }
+.all-coupons-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.deal-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+  height: 210px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+}
+
+.deal-card-title {
+  font-size: 16px;
+  margin: 8px 0 4px 0;
+}
+
+/* Container for all deal cards */
+.deal-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+
+/* Individual deal card */
+.deal-card {
+  width: 380px;
+  min-height: 450px;
+  padding: 22px;
+  border-radius: 20px;
+  border: 2px dotted #d0d5dd;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Image wrapper */
+.deal-card-image-wrapper {
+  height: 320px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main deal image */
+.deal-card-main-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Overlays */
+.deal-card-overlay-top {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10%;
+  height: auto;
+}
+
+.deal-card-overlay-small-top {
+  position: absolute;
+  bottom: 30px;
+  left: 27px;
+  width: 8%;
+  height: auto;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.deal-card-overlay-bottom {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 10%;
+  height: auto;
+}
+
+/* Text overlay inside the image */
+.deal-card-image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 12px 15px;
+  font-size: 16px;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+
+/* Card title */
+.deal-card-title {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* Description text */
+.deal-card-description {
+  font-size: 11px;
+  color: #444;
+  margin: 0;
+  line-height: 1.4;
+  min-height: 22px;
+}
+
+/* Tags wrapper */
+.deal-card-tags {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Individual tag */
+.deal-card-tag {
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Tag icon */
+.deal-card-tag-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+@media (max-width: 1024px) {
+  .category-container {
+    flex-direction: column;
+  }
+  .deal-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobiles */
+@media (max-width: 1024px) {
+  .category-container {
+    flex-direction: column;
+  }
+  .deal-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .category-header {
+    padding: 15px 20px;
+  }
+  .deal-cards-container {
+    grid-template-columns: 1fr;
+  }
+  .deal-card-title {
+    font-size: 16px;
+  }
+  .deal-card-description {
+    font-size: 13px;
+  }
+}
