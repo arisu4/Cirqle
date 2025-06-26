@@ -41,7 +41,7 @@ const Login = () => {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen font-sans">
       {/* Left Section - Hidden on small screens */}
-      <div className="hidden lg:flex lg:flex-1 items-center justify-center p-5 bg-gray-50">
+      <div className="hidden lg:flex lg:flex-1 items-center justify-center p-5 ">
         <img
           src={frame}
           alt="Laptop"
@@ -52,15 +52,12 @@ const Login = () => {
       {/* Right Section */}
       <div className="flex-1 bg-white p-4 sm:p-6 lg:p-10 flex flex-col justify-center items-center relative">
         {/* Visit Home Link */}
-        <div className="absolute top-4 left-24">
-          <Link
-            to="/"
-            className="text-sm hover:text-blue-600"
-            style={{ color: "#667085" }}
-          >
-            Visit Home
-          </Link>
-        </div>
+        <Link
+          to="/"
+          className="absolute top-4 right-20 text-sm text-blue-600 hover:opacity-80"
+        >
+          Visit Home
+        </Link>
 
         {/* Login Content */}
         <div className="w-full max-w-md">
@@ -150,22 +147,22 @@ const Login = () => {
           </p>
 
           {/* Social Login Buttons */}
+
           <div className="flex justify-center items-center gap-4 mt-2 flex-wrap">
-            <img src={apple} alt="Apple" className="h-9 w-24 cursor-pointer" />
+            <img
+              src={apple}
+              alt="Apple"
+              className="h-9 w-[200px] cursor-pointer"
+            />
             <img
               src={google}
               alt="Google"
-              className="h-9 w-24 cursor-pointer"
+              className="h-9 w-[200px] cursor-pointer"
             />
             <img
               src={facebook1}
               alt="Facebook"
-              className="h-9 w-24 cursor-pointer"
-            />
-            <img
-              src={instagram}
-              alt="Instagram"
-              className="h-9 w-24 cursor-pointer"
+              className="h-9 w-[200px] cursor-pointer"
             />
           </div>
 

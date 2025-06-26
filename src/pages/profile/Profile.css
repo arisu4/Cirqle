@@ -1,0 +1,114 @@
+.profile-container {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .sidebar {
+    width: 180px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-right: 2px solid #00b894;
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .tab:hover,
+  .tab.active {
+    background-color: #e0f7fa;
+    color: #00796b;
+  }
+  
+  .profile-content {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .profile-picture {
+    position: relative;
+    width: 80px;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .camera-icon {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: #eee;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .required {
+    color: red;
+  }
+  
+  input[type="email"],
+  input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .cancel-btn,
+  .save-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .cancel-btn {
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .save-btn {
+    background-color: #007bff;
+    color: #fff;
+  }
+  

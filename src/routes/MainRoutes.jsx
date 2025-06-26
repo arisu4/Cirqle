@@ -27,7 +27,7 @@ const MainRoutes = () => {
               {/* <ListingDetails/>
               <Withoutcoupondetails/> */}
               {/* <RelevantDeals/> */}
-             <Mycoupon/>
+             {/* <Mycoupon/> */}
               <Banner2 />
               <br />
               <DealsList />
