@@ -251,7 +251,7 @@
   cursor: pointer;
   text-align: right;
 }
-/* social media modal */
+/* social media modal with image and url */
 .input-with-icon {
   position: relative;
   margin-bottom: 12px;
@@ -265,7 +265,13 @@
   width: 20px;
   height: 20px;
 }
-
+.modal-input-social {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* left padding for icon */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+/* this modal-input for my profile modal */
 .modal-input {
   width: 100%;
   padding: 10px 10px 10px 40px; /* left padding for icon */
@@ -644,7 +650,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: stretch; /* force equal height */
+    align-items: stretch; 
     border-right: none;
     border-bottom: 1px solid #eaecf0;
     padding-bottom: 6px;
@@ -660,8 +666,8 @@
     padding: 4px;
     text-align: center;
     gap: 2px;
-    height: 100%; /* fill parent height */
-    min-height: 64px; /* optional fixed min height to match others */
+    height: 100%; 
+    min-height: 64px; 
   }
   .modal-main {
     padding-left: 0;

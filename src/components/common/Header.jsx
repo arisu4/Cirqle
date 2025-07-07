@@ -79,7 +79,7 @@ const Header = () => {
             </button>
           </div>
 
-          {/* User/Login Button - shows different options based on auth state */}
+          {/* User/Login Button  */}
           <div className="login-wrapper">
             <button
               onClick={() => setShowLoginOptions((prev) => !prev)}
@@ -317,9 +317,10 @@ const Header = () => {
                         alt="Facebook"
                         className="input-icon"
                       />
+
                       <input
                         type="url"
-                        className="modal-input"
+                        className="modal-input-social"
                         placeholder="Facebook URL"
                       />
                     </div>
@@ -330,9 +331,10 @@ const Header = () => {
                         alt="Instagram"
                         className="input-icon"
                       />
+
                       <input
                         type="url"
-                        className="modal-input"
+                        className="modal-input-social"
                         placeholder="Instagram URL"
                       />
                     </div>
@@ -343,9 +345,10 @@ const Header = () => {
                         alt="youtube"
                         className="input-icon"
                       />
+
                       <input
                         type="url"
-                        className="modal-input"
+                        className="modal-input-social"
                         placeholder="Twitter URL"
                       />
                     </div>
@@ -356,9 +359,10 @@ const Header = () => {
                         alt="tiktok"
                         className="input-icon"
                       />
+
                       <input
                         type="url"
-                        className="modal-input"
+                        className="modal-input-social"
                         placeholder="LinkedIn URL"
                       />
                     </div>
@@ -384,4 +388,3 @@ const Header = () => {
 };
 
 export default Header;
-

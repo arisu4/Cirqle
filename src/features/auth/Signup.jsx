@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { registerUser } from "../../services/authService";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { toast } from "react-toastify";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -36,12 +37,12 @@ const Signup = () => {
     e.preventDefault();
 
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
+      toast.error("Passwords do not match!");
       return;
     }
 
     if (!formData.agree) {
-      alert("You must agree to the terms & conditions.");
+      toast.error("You must agree to the terms & conditions.");
       return;
     }
 
@@ -58,15 +59,14 @@ const Signup = () => {
       if (res.token) {
         // Only use first name
         login({ name: res.user?.firstName || "", token: res.token });
-        console.log("🔍 Registration response:", res);
-
+        console.log("Registration response:", res);
 
         navigate("/");
       } else {
-        alert("Registration failed. Please try again.");
+        toast.error("Registration failed. Please try again.");
       }
     } catch (err) {
-      alert(err.response?.data?.message || "Registration failed.");
+      toast.error(err.response?.data?.message || "Registration failed.");
     }
   };
 
@@ -220,8 +220,12 @@ const Signup = () => {
           </p>
 
           <div className="flex justify-center gap-4 mt-2 flex-wrap">
-  <img src={google} alt="Google" className="h-9 w-24 cursor-pointer" />
-</div>
+            <img
+              src={google}
+              alt="Google"
+              className="h-9 w-24 cursor-pointer"
+            />
+          </div>
 
           <p className="text-center text-sm mt-4">
             Already have an account?{" "}
