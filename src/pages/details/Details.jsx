@@ -1,14 +1,14 @@
 import React from "react";
-import "./ListingDetails.css";
-import component2 from "../../../assets/images/component2.png";
-import sofa1 from "../../../assets/images/sofa1.png";
-import sofa2 from "../../../assets/images/sofa2.png";
-import sofa3 from "../../../assets/images/sofa3.png";
-import sofa4 from "../../../assets/images/sofa4.png";
-import Logos from "../../../assets/images/Logos.png";
-import location from "../../../assets/images/location.png";
-import AirplaneTilt from "../../../assets/images/AirplaneTilt.png";
-import coupon from "../../../assets/images/coupon.png";
+import "./Details.css";
+import component2 from "../../assets/images/component2.png";
+import sofa1 from "../../assets/images/sofa1.png";
+import sofa2 from "../../assets/images/sofa2.png";
+import sofa3 from "../../assets/images/sofa3.png";
+import sofa4 from "../../assets/images/sofa4.png";
+import Logos from "../../assets/images/Logos.png";
+import location from "../../assets/images/location.png";
+import AirplaneTilt from "../../assets/images/AirplaneTilt.png";
+import coupon from "../../assets/images/coupon.png";
 
 const ListingDetails = () => {
   return (

@@ -3,16 +3,17 @@ import frame from "../../assets/images/frame.png";
 import { Eye, EyeOff } from "lucide-react";
 import logo2 from "../../assets/images/logo2.png";
 import logo from "../../assets/images/logo.png";
-import facebook1 from "../../assets/images/facebook1.png";
-import instagram from "../../assets/images/instagram.png";
 import google from "../../assets/images/google.png";
-import apple from "../../assets/images/apple.png";
 import { Link } from "react-router-dom";
 import { registerUser } from "../../services/authService";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
 
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const navigate = useNavigate();
+  const { login } = useAuth();
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -30,38 +31,37 @@ const Signup = () => {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-  
+
     if (!formData.agree) {
       alert("You must agree to the terms & conditions.");
       return;
     }
-  
-    // const payload = {
-    //   userEmail: formData.email,
-    //   userPassword: formData.password,
-    //   firstName: formData.firstName,
-    //   lastName: formData.lastName,
-    // };
-       const payload = {
-      userEmail: "test1@gmai.com",
-      userPassword: "123456",
-      firstName: "Testt",
-      lastName: "da",
+
+    const payload = {
+      userEmail: formData.email,
+      userPassword: formData.password,
+      firstName: formData.firstName,
+      lastName: formData.lastName,
     };
-  
+
     try {
       const res = await registerUser(payload);
+
       if (res.token) {
-        sessionStorage.setItem("authToken", res.token);
-        alert("Account created successfully!");
-        // navigate("/dashboard"); // If using react-router-dom
+        // Only use first name
+        login({ name: res.user?.firstName || "", token: res.token });
+        console.log("🔍 Registration response:", res);
+
+
+        navigate("/");
       } else {
         alert("Registration failed. Please try again.");
       }
@@ -69,7 +69,7 @@ const Signup = () => {
       alert(err.response?.data?.message || "Registration failed.");
     }
   };
-  
+
   return (
     <div className="flex flex-col lg:flex-row min-h-screen font-sans">
       {/* Left Section - Hidden on small screens */}
@@ -148,7 +148,6 @@ const Signup = () => {
                 className="w-full mt-1 p-2 rounded-md border border-gray-300"
               >
                 <option value="Merchant">Merchant</option>
-                <option value="Customer">Customer</option>
               </select>
             </label>
 
@@ -209,10 +208,9 @@ const Signup = () => {
               />
               <span>I agree to Terms & Conditions</span>
             </div>
-
             <button
               type="submit"
-              className="w-full sm:w-[450px] h-[35px] bg-blue-600 text-white rounded-md text-sm mx-auto block"
+              className="w-full sm:w-[450px] h-[35px] bg-blue-600 text-white rounded-md text-sm mx-auto block cursor-pointer"
             >
               Create Account
             </button>
@@ -222,23 +220,8 @@ const Signup = () => {
           </p>
 
           <div className="flex justify-center gap-4 mt-2 flex-wrap">
-            <img src={apple} alt="Apple" className="h-9 w-24 cursor-pointer" />
-            <img
-              src={google}
-              alt="Google"
-              className="h-9 w-24 cursor-pointer"
-            />
-            <img
-              src={facebook1}
-              alt="Facebook"
-              className="h-9 w-24 cursor-pointer"
-            />
-            <img
-              src={instagram}
-              alt="Instagram"
-              className="h-9 w-24 cursor-pointer"
-            />
-          </div>
+  <img src={google} alt="Google" className="h-9 w-24 cursor-pointer" />
+</div>
 
           <p className="text-center text-sm mt-4">
             Already have an account?{" "}

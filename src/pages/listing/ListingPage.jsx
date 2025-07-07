@@ -15,7 +15,7 @@ import search from "../../assets/images/search.png";
 import airplane from "../../assets/images/AirplaneTilt.png";
 import compass from "../../assets/images/Compass.png";
 import { Link } from "react-router-dom";
-import "./CategoryList.css";
+import "./ListingPage.css";
 import Header from "../../components/common/Header";
 import Footer from "../../components/common/Footer";
 

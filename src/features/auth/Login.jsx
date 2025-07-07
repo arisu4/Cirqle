@@ -3,21 +3,21 @@ import frame from "../../assets/images/frame.png";
 import { Eye, EyeOff } from "lucide-react";
 import logo2 from "../../assets/images/logo2.png";
 import logo from "../../assets/images/logo.png";
-import facebook1 from "../../assets/images/facebook1.png";
-import instagram from "../../assets/images/instagram.png";
 import google from "../../assets/images/google.png";
-import apple from "../../assets/images/apple.png";
 import { Link } from "react-router-dom";
+import { loginUser } from "../../services/authService";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
-    role: "Merchant",
     password: "",
-    confirmPassword: "",
     agree: false,
   });
 
@@ -29,13 +29,80 @@ const Login = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.agree) {
-      alert("You must agree to the terms & conditions.");
+      toast.warning("You must agree to the terms & conditions.");
       return;
     }
-    console.log("Submitted data:", formData);
+
+    try {
+      const payload = {
+        userEmail: formData.email,
+        userPassword: formData.password,
+      };
+
+      const response = await loginUser(payload);
+      // console.log("Login API response:", response);
+
+      if (response.status == 200) {
+        if (response.data.statusCode == 200) {
+          const token = response?.data?.token;
+
+          const firstName =
+            response?.data?.firstName || response?.firstName || "";
+          const lastName = response?.data?.lastName || response?.lastName || "";
+
+          let fullName = `${firstName} ${lastName}`.trim();
+
+          if (!fullName) {
+            const emailUsername = formData.email?.split("@")[0];
+            fullName = emailUsername || "User";
+          }
+
+          login({ name: fullName, token });
+          sessionStorage.setItem("token", token);
+          sessionStorage.setItem("userName", fullName);
+
+          toast.success("Login successful!");
+          navigate("/");
+        } else {
+          toast.error("Something went wrong.");
+        }
+      } else {
+        toast.error("Something went wrong.");
+      }
+
+      // const token =
+      //   response?.data?.token ||
+      //   response?.token ||
+      //   (typeof response === "string" ? response : null);
+
+      // if (token) {
+      //   const firstName =
+      //     response?.data?.firstName || response?.firstName || "";
+      //   const lastName = response?.data?.lastName || response?.lastName || "";
+
+      //   let fullName = `${firstName} ${lastName}`.trim();
+
+      //   if (!fullName) {
+      //     const emailUsername = formData.email?.split("@")[0];
+      //     fullName = emailUsername || "User";
+      //   }
+
+      //   login({ name: fullName, token });
+      //   sessionStorage.setItem("token", token);
+      //   sessionStorage.setItem("userName", fullName);
+
+      //   toast.success("Login successful!");
+      //   navigate("/");
+      // } else {
+      //   toast.error("Login failed: No token found in response.");
+      // }
+    } catch (error) {
+      // console.error("Login failed:", error);
+      toast.error("Login failed. Please check your credentials.");
+    }
   };
 
   return (
@@ -135,7 +202,7 @@ const Login = () => {
 
             <button
               type="submit"
-              className="w-full sm:w-[450px] h-[35px] bg-blue-600 text-white rounded-md text-sm mx-auto block"
+              className="w-full sm:w-[450px] h-[35px] bg-blue-600 text-white rounded-md text-sm mx-auto block cursor-pointer"
             >
               Login
             </button>
@@ -150,19 +217,9 @@ const Login = () => {
 
           <div className="flex justify-center items-center gap-4 mt-2 flex-wrap">
             <img
-              src={apple}
-              alt="Apple"
-              className="h-9 w-[200px] cursor-pointer"
-            />
-            <img
               src={google}
               alt="Google"
-              className="h-9 w-[200px] cursor-pointer"
-            />
-            <img
-              src={facebook1}
-              alt="Facebook"
-              className="h-9 w-[200px] cursor-pointer"
+              className="h-9 w-24 cursor-pointer"
             />
           </div>
 
